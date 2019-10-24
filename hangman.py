@@ -6,18 +6,21 @@ while True:
 		myWord = random.choice(randomWord)
 	else:
 		pass
+	Word = myWord
 	myWord = list(myWord)
-	len(myWord) = letters
+	letters = len(myWord)
 	guessList = list("_" * letters)
 	score = 0
 	attempts = input("How many attempts do you want before guessing? (I recommend 8) ")
+	print(guessList)
 	for x in range(int(attempts)):
 		guess = input("Guess a letter: ")
 		index = 0
 		for letter in myWord:
 			if letter == guess:
-				guesslist[index] = guess
+				guessList[index] = guess
 			index += 1
+		print(guessList)
 		#if guess in myWord:
 			#print(guess + " is in the word")
 		#else:
@@ -28,12 +31,13 @@ while True:
 				#print(count)
 				#count += 1
 	choise = input("Guess the word: ")
-	if choise == myWord:
+	if choise == Word:
 		print("We have a winner!")
+		print("The word was indeed " + Word)
 		score = score + 1
 	else:
 		print("sorry no good.")
-		print("The word was: " + myWord)
+		print("The word was: " + Word)
 	playAgain = input("Do you want to play again? y/n ")
 	if playAgain == "y":
 		pass
@@ -41,3 +45,5 @@ while True:
 		break
 	else:
 		print("Error: " + playAgain + " was not a choice")
+		print("Interpreting vauge answer as: n")
+		break
