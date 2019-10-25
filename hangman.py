@@ -1,7 +1,7 @@
 import random
 while True:
 	myWord = input("Type the word, leave blank for a random word: ")
-	randomWord = ["jazz", "jail", "scratch", "smell", "apple", "water", "honey", "river", "random", "happy", "smile", "cheer", "avacado", "orange", "word", "desert", "dazzle", "mirage", "saloon", "dust", "hill", "sand", "metropolis", "misisippi", "oil", "ocean", "emerald", "green", "chemical", "plant", "marble", "spring", "yard", "labrynth", "star", "light", "scrap", "brain", "aquatic", "ruin", "casino", "night", "top", "mystic", "cave", "sky", "chase", "wing", "fortress", "death", "egg", "palm", "tree", "panic", "colision", "chaos", "tidal", "tempest", "quartz", "quadrant", "wacky", "work", "bench", "workbench", "stardust", "dust", "speedway", "speed", "way", "metalic", "madness", "metal", "mad", "angel", "island", "hydro", "city", "garden", "carnival", "ice", "cap", "launch", "base", "mushroom", "valley", "flying", "fly", "battery", "lava", "reef", "hidden", "palace", "sanctuary", "doomsday", "doom", "day", "highway", "escape", "seaside", "sea", "side", "crisis", "rooftop", "roof", "run", "planet", "wisp", "studio", "super", "press", "titanic", "monarch", "reverie", "hyper", "ultimate", "technology", "the", "or", "and", "if", "not", "sorry", "i", "cant", "repeat", "but", "burn", "to", "ash", "please", "thank", "you", "diamond", "ruby", "saphire", "gem", "stone", "jewel", "gypsy"]
+	randomWord = ["jazz", "jail", "scratch", "smell", "apple", "water", "honey", "river", "random", "happy", "smile", "cheer", "avacado", "orange", "word", "desert", "dazzle", "mirage", "saloon", "dust", "hill", "sand", "metropolis", "misisippi", "oil", "ocean", "emerald", "green", "chemical", "plant", "marble", "spring", "yard", "labrynth", "star", "light", "scrap", "brain", "aquatic", "ruin", "casino", "night", "top", "mystic", "cave", "sky", "chase", "wing", "fortress", "death", "egg", "palm", "tree", "panic", "colision", "chaos", "tidal", "tempest", "quartz", "quadrant", "wacky", "work", "bench", "workbench", "stardust", "dust", "speedway", "speed", "way", "metalic", "madness", "metal", "mad", "angel", "island", "hydro", "city", "garden", "carnival", "ice", "cap", "launch", "base", "mushroom", "valley", "flying", "fly", "battery", "lava", "reef", "hidden", "palace", "sanctuary", "doomsday", "doom", "day", "highway", "escape", "seaside", "sea", "side", "crisis", "rooftop", "roof", "run", "planet", "wisp", "studio", "super", "press", "titanic", "monarch", "reverie", "hyper", "ultimate", "technology", "the", "or", "and", "if", "not", "sorry", "cant", "repeat", "but", "burn", "to", "ash", "please", "thank", "you", "diamond", "ruby", "saphire", "gem", "stone", "jewel", "gypsy", "gold", "silver", "bronze", "tide", "iceberg", "wolf", "wet", "see", "alpha", "beta", "omega"]
 	if myWord == "":
 		myWord = random.choice(randomWord)
 	else:
@@ -21,19 +21,10 @@ while True:
 				guessList[index] = guess
 			index += 1
 		print(guessList)
-		#if guess in myWord:
-			#print(guess + " is in the word")
-		#else:
-			#print(guess + " is not in the word.")
-		#count = 1
-		#for l in myWord:
-			#if l == guess:
-				#print(count)
-				#count += 1
 	choise = input("Guess the word: ")
 	if choise == Word:
 		print("We have a winner!")
-		print("The word was indeed " + Word)
+		print("The word was indeed " + Word + ".")
 		score = score + 1
 	else:
 		print("sorry no good.")
@@ -42,6 +33,7 @@ while True:
 	if playAgain == "y":
 		pass
 	elif playAgain == "n":
+		print("Thanks for playing!")
 		break
 	else:
 		print("Error: " + playAgain + " was not a choice")
